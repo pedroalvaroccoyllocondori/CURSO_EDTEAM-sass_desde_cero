@@ -1,0 +1,4 @@
+body {
+  background: linear-gradient(red, blue);
+  max-width: 100vh;
+  font-size: 10em; }
