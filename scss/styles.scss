@@ -1,9 +1,24 @@
-// ciclo for
+// ciclo foreach
+// foreach en lista
+$colore: goldenrod rebeccapurple peru;
 
-@for $i from 1 through 20{
-    @if $i %2==0{
-        .colum-#{$i*5}{
-            width: $i*5%;
-        }
+@each $colorIterados in $colore{
+    .botones-#{$colorIterados}{
+        background-color:$colorIterados
     }
 }
+// foreach en mapas
+
+$coloresMapa: (
+    boton: red,
+    menus: green,
+    sidebar:peru
+
+);
+
+@each $llave,$valor in $coloresMapa{
+    .boton-#{$llave}{
+        color:$valor;
+    }
+}
+
