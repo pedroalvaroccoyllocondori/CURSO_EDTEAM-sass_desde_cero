@@ -1,9 +1,20 @@
-h3 {
-  color: rebeccapurple;
-  size: 16rem;
-  font-family: 'Courier New', Courier, monospace;
-  display: inline-block;
-  content: "hola mundo"; }
-
-body {
+h1 {
   color: red; }
+
+.boton, .boton-alerta {
+  display: block;
+  padding: auto;
+  margin-top: 5rem; }
+
+.boton, .boton-alerta {
+  color: rebeccapurple; }
+
+h2, .boton-alerta {
+  padding-left: 5rem; }
+
+.boton-alerta {
+  background-color: red;
+  color: white; }
+
+.boton:hover, .boton-alerta:hover, .boton.active, .active.boton-alerta {
+  transform: translateY(-2em); }

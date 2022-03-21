@@ -1,8 +1,43 @@
 // importando archivos en sass
-@import 'variables';
-$hola:'hola mundo';
-@import "menu";
 
-body{
-    color: $importar
+
+@import "componentes/base.scss";
+
+// placeholder guardan estilos de codigo
+// atributo @extend
+
+
+
+%boton{
+    display: block;
+    padding: auto;
+    margin-top: 5rem;
+}
+
+.boton{
+    color:rebeccapurple;
+}
+
+h2{
+    padding-left: 5rem
+}
+
+.boton{
+    @extend %boton;
+}
+
+.boton-alerta{
+    @extend .boton;
+    @extend %boton;
+    @extend h2;
+    background-color: red;
+    color: white;
+}
+
+.boton:hover{
+    transform: translateY(-2em);
+}
+
+.boton.active{
+    @extend .boton:hover;
 }
