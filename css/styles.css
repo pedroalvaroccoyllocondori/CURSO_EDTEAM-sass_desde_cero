@@ -1,4 +1,15 @@
 body {
-  background: linear-gradient(red, blue);
+  background: linear-gradient(rebeccapurple, blue);
   max-width: 100vh;
   font-size: 10em; }
+
+p {
+  color: black;
+  font-size: 25rem;
+  width: calc(100%-5em); }
+
+rebeccapurple {
+  color: black; }
+
+.rebeccapurple {
+  color: black; }
