@@ -1,28 +1,47 @@
 $color:rebeccapurple;
 $pixel:5em;
-
-body{
-    background:linear-gradient($color,blue);
-    max-width: 100vh;
-    font-size: 10em;
-    $color-body:black;
+// anidamiento en sass solo se recomienda el anidamiento hasta el 2do nivel en sass
+ul{
+    color :$color;
+    li{
+        background: $color;
+    }
+    a{
+        text-decoration: none;
+    }
+    span{
+        display: inline-block;
+    }
 }
 
-// scope de las variable 
-
-p{
-    $color:black;
-    $tamaño: 5rem;
-    //color:$color-body;//error de scope
-    color:$color;
-    font-size:$tamaño*5;
-    width:calc(100%-#{$pixel})
+ol{
+    display: inline;
+    animation: animacion 1s infinite;
+    //&-->repite el selector unpersand
+    &:hover{
+        color: black;
+    }
+    &::after{
+        content: "";
+        display: block;
+    }
+    @media screen and(min-width:640px) {
+        display:flex;
+    }
+    @keyframes animacion {
+        to{
+            color: red;
+        }
+    }
 }
-// INTERPOLAR convertir una variable en un selector
-#{$color}{
-    color:black;
-}
 
-.#{$color}{
-    color:black;
+.menu{
+    display: relative;
+    &-item{
+        color:red;
+    }
+    grid-template: {
+        columns:100px 100px;
+        rows:auto;
+    }
 }
