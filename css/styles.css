@@ -1,20 +1,5 @@
-h1 {
-  color: red; }
+h6 {
+  outline: 1px solid red; }
 
-.boton, .boton-alerta {
-  display: block;
-  padding: auto;
-  margin-top: 5rem; }
-
-.boton, .boton-alerta {
-  color: rebeccapurple; }
-
-h2, .boton-alerta {
-  padding-left: 5rem; }
-
-.boton-alerta {
-  background-color: red;
-  color: white; }
-
-.boton:hover, .boton-alerta:hover, .boton.active, .active.boton-alerta {
-  transform: translateY(-2em); }
+.colores {
+  color: antiquewhite; }

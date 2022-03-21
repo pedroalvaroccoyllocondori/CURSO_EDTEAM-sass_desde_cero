@@ -1,43 +1,34 @@
-// importando archivos en sass
 
+// condicionales
 
-@import "componentes/base.scss";
+$variable:false !default;
 
-// placeholder guardan estilos de codigo
-// atributo @extend
+@if $variable == true{
+    *{
+        outline:1px solid red;
+    }
+}
+$condicion:15;
+@if $condicion==10 or $condicion>=15{
+    h6{
+        outline:1px solid red;
+    }
+}@else if $condicion==15 and $condicion<=16{
+    h5{
+        border-bottom: 5rem;
+    }
+}@else{
 
-
-
-%boton{
-    display: block;
-    padding: auto;
-    margin-top: 5rem;
+    h9{
+        border-top: 445rem;
+    }
 }
 
-.boton{
-    color:rebeccapurple;
-}
+// controlar la importacion con condicionales
 
-h2{
-    padding-left: 5rem
-}
+$colores:true !default;
+$botones:false !default;
 
-.boton{
-    @extend %boton;
-}
+@import "botones";
+@import "colores";
 
-.boton-alerta{
-    @extend .boton;
-    @extend %boton;
-    @extend h2;
-    background-color: red;
-    color: white;
-}
-
-.boton:hover{
-    transform: translateY(-2em);
-}
-
-.boton.active{
-    @extend .boton:hover;
-}
