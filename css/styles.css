@@ -1,31 +1,20 @@
-ul {
-  color: rebeccapurple; }
-  ul li {
-    background: rebeccapurple; }
-  ul a {
-    text-decoration: none; }
-  ul span {
-    display: inline-block; }
+body {
+  background: string;
+  content: hola; }
 
-ol {
-  display: inline;
-  animation: animacion 1s infinite; }
-  ol:hover {
-    color: black; }
-  ol::after {
-    content: "";
-    display: block; }
-  @media screen and (min-width: 640px) {
-    ol {
-      display: flex; } }
+h1 {
+  background: number;
+  padding: 0.625rem; }
 
-@keyframes animacion {
-  to {
-    color: red; } }
+h3 {
+  color: color; }
 
-.menu {
-  display: relative;
-  grid-template-columns: 100px 100px;
-  grid-template-rows: auto; }
-  .menu-item {
-    color: red; }
+h3 {
+  color: bool; }
+
+h5 {
+  color: list; }
+
+h6 {
+  color: map;
+  color: #000000; }

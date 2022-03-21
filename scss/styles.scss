@@ -1,47 +1,54 @@
-$color:rebeccapurple;
-$pixel:5em;
-// anidamiento en sass solo se recomienda el anidamiento hasta el 2do nivel en sass
-ul{
-    color :$color;
-    li{
-        background: $color;
-    }
-    a{
-        text-decoration: none;
-    }
-    span{
-        display: inline-block;
-    }
-}
+// tipos de datos en sass
+// cadenas
+// numeros
+// colores
+// booleanos
+// maps
+// list
+// ****************
+$variable:unquote('hola');
+// funcion quote y unquote 
+// quote-->pone comillas y unquote saca las comillas
 
-ol{
-    display: inline;
-    animation: animacion 1s infinite;
-    //&-->repite el selector unpersand
-    &:hover{
-        color: black;
-    }
-    &::after{
-        content: "";
-        display: block;
-    }
-    @media screen and(min-width:640px) {
-        display:flex;
-    }
-    @keyframes animacion {
-        to{
-            color: red;
-        }
-    }
+body {
+    background: type-of($variable);
+    content: $variable;
 }
+// ****************
 
-.menu{
-    display: relative;
-    &-item{
-        color:red;
-    }
-    grid-template: {
-        columns:100px 100px;
-        rows:auto;
-    }
+$variable2:5rem;
+
+h1{
+    background:type-of($variable2);
+    padding:$variable2/8;
+}
+// ****************
+
+$variable3:goldenrod;
+h3{
+    color: type-of($variable3);
+}
+// ****************
+
+$variable4:true;
+h3{
+    color: type-of($variable4);
+}
+// ****************
+
+$variable5:1px solid blue;
+$variable5:1px ,solid, blue;
+h5{
+    color: type-of($variable5);
+}
+// ****************
+
+$variable6:(
+    color: #000000,
+    size:5rem,
+    content:'los gatos'
+);
+h6{
+    background: type-of($variable6);
+    color: map-get($map: $variable6, $key:color );
 }
