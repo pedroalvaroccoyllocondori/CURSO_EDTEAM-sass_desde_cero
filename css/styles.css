@@ -1,5 +1,29 @@
-h6 {
-  outline: 1px solid red; }
+.colum-10 {
+  width: 10%; }
 
-.colores {
-  color: antiquewhite; }
+.colum-20 {
+  width: 20%; }
+
+.colum-30 {
+  width: 30%; }
+
+.colum-40 {
+  width: 40%; }
+
+.colum-50 {
+  width: 50%; }
+
+.colum-60 {
+  width: 60%; }
+
+.colum-70 {
+  width: 70%; }
+
+.colum-80 {
+  width: 80%; }
+
+.colum-90 {
+  width: 90%; }
+
+.colum-100 {
+  width: 100%; }

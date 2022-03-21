@@ -1,34 +1,9 @@
+// ciclo for
 
-// condicionales
-
-$variable:false !default;
-
-@if $variable == true{
-    *{
-        outline:1px solid red;
+@for $i from 1 through 20{
+    @if $i %2==0{
+        .colum-#{$i*5}{
+            width: $i*5%;
+        }
     }
 }
-$condicion:15;
-@if $condicion==10 or $condicion>=15{
-    h6{
-        outline:1px solid red;
-    }
-}@else if $condicion==15 and $condicion<=16{
-    h5{
-        border-bottom: 5rem;
-    }
-}@else{
-
-    h9{
-        border-top: 445rem;
-    }
-}
-
-// controlar la importacion con condicionales
-
-$colores:true !default;
-$botones:false !default;
-
-@import "botones";
-@import "colores";
-
