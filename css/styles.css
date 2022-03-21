@@ -1,20 +1,9 @@
+h3 {
+  color: rebeccapurple;
+  size: 16rem;
+  font-family: 'Courier New', Courier, monospace;
+  display: inline-block;
+  content: "hola mundo"; }
+
 body {
-  background: string;
-  content: hola; }
-
-h1 {
-  background: number;
-  padding: 0.625rem; }
-
-h3 {
-  color: color; }
-
-h3 {
-  color: bool; }
-
-h5 {
-  color: list; }
-
-h6 {
-  color: map;
-  color: #000000; }
+  color: red; }
