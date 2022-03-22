@@ -1,8 +1,13 @@
 @import "variables/variables";
 @import "mixins/mixins";
 
-
+$rojo:red;
 
 p{
-    @include tipografia
+    @include tipografia($rojo);
+}
+
+
+.menu{
+    @include menu('.item',li)//cuando son clases se envia el parametro entre comillass
 }
