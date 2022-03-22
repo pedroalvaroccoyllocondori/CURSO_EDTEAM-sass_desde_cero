@@ -1,0 +1,16 @@
+@mixin tipografia{
+
+    @if $texto{
+        
+            font-size:2rem;
+            font-weight:bold;
+            text-align:center;
+        
+            a{
+                text-decoration: dashed;
+                color: peru;
+            }
+
+
+        }
+}

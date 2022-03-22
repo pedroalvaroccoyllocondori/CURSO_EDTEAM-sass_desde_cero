@@ -1,34 +1,8 @@
-$colores:hsl(0,100,50);
-@for $i from 1 through 360{
-    $colores:append($colores,hsl($i,100,50),comma)
-}
-$grises:hsl(0,0,0);
-@for $i from 1 through 100{
-    $grises:append($grises,hsl(0,0,$i),comma)
-}
-$saturacion:hsl(150,0,80%);
-@for $i from 1 through 100{
-    $saturacion:append($saturacion,hsl(100,$i,50%),comma)
-}
+@import "variables/variables";
+@import "mixins/mixins";
 
-div{
-    outline:1px solid black
-}
 
-div:nth-of-type(1){
-    background: linear-gradient($colores);
-    height: 35rem;
-    width: 35rem;
-}
-div:nth-of-type(2){
-    background: linear-gradient($grises);
-    height: 35rem;
-    width: 35rem;
 
-}
-div:nth-of-type(3){
-    background: linear-gradient($saturacion);
-    height: 35rem;
-    width: 35rem;
-
+p{
+    @include tipografia
 }
