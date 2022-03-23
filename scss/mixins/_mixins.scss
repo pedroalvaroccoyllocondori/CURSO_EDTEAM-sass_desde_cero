@@ -1,29 +1,27 @@
-@mixin tipografia($color){
+@mixin tipografia($colores...){
 
     @if $texto{
-        
-            font-size:2rem;
-            font-weight:bold;
-            text-align:center;
-            color:$color;
-        
-            a{
-                text-decoration: dashed;
-                color: peru;
+            .botton{
+                font-size:2rem;
+                font-weight:bold;
+                text-align:center;
+                color:map-get($colores-botones,nth($list: $colores, $n:1 ));
+            
+                a{
+                    text-decoration: dashed;
+                    color: peru;
+                }
+
+            }
+            @if length($colores) > 1{
+                @for $i from 2 through length($colores){
+                    .#{nth($colores,$i)}{
+                        color:map-get($colores-botones,nth($colores,$i));
+                    }
+                }
             }
 
-
         }
+
 }
-@mixin  menu($selector-item,$selector-link) {
-    margin-bottom:0;
-    margin-top:0;
-    list-style: none;
-    #{$selector-item}{
-        display: block;
-    }
-    #{$selector-link}{
-        text-decoration: double;
-        display: block;
-    }
-}
+

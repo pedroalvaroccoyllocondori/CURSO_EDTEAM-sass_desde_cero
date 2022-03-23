@@ -1,18 +1,14 @@
-p {
+p .botton {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  color: red; }
-  p a {
+  color: blue; }
+  p .botton a {
     text-decoration: dashed;
     color: peru; }
 
-.menu {
-  margin-bottom: 0;
-  margin-top: 0;
-  list-style: none; }
-  .menu .item {
-    display: block; }
-  .menu li {
-    text-decoration: double;
-    display: block; }
+p .secundario {
+  color: orange; }
+
+p .tercero {
+  color: red; }

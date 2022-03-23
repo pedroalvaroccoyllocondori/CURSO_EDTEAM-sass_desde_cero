@@ -4,10 +4,6 @@
 $rojo:red;
 
 p{
-    @include tipografia($rojo);
+    @include tipografia(map-keys($colores-botones)...);
 }
 
-
-.menu{
-    @include menu('.item',li)//cuando son clases se envia el parametro entre comillass
-}
