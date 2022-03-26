@@ -1,12 +1,9 @@
 // funciones en sass
+@import "config/funciones";
+@import "config/variables";
 
-@function duplicar($valor){
-    @if type-of($valor)==number{
-        @return $valor*3;
-    }
-    @return null;
-}
+
 
 body{
-    min-height:duplicar('gato');
+    background-image: imagen('gatos.svg');
 }
