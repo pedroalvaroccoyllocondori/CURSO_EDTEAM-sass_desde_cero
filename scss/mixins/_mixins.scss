@@ -1,27 +1,7 @@
-@mixin tipografia($colores...){
-
-    @if $texto{
-            .botton{
-                font-size:2rem;
-                font-weight:bold;
-                text-align:center;
-                color:map-get($colores-botones,nth($list: $colores, $n:1 ));
-            
-                a{
-                    text-decoration: dashed;
-                    color: peru;
-                }
-
-            }
-            @if length($colores) > 1{
-                @for $i from 2 through length($colores){
-                    .#{nth($colores,$i)}{
-                        color:map-get($colores-botones,nth($colores,$i));
-                    }
-                }
-            }
-
-        }
-
+@mixin menu{
+    color : red;
+    padding: auto;
+    .content{
+        @content;
+    }
 }
-

@@ -1,9 +1,9 @@
-@import "variables/variables";
 @import "mixins/mixins";
 
-$rojo:red;
-
-p{
-    @include tipografia(map-keys($colores-botones)...);
+.menu{
+    @include menu{
+        display: inline;
+        background: linear-gradient(red,blue)
+    };
+    
 }
-

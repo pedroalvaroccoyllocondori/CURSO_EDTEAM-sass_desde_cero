@@ -1,14 +1,6 @@
-p .botton {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  color: blue; }
-  p .botton a {
-    text-decoration: dashed;
-    color: peru; }
-
-p .secundario {
-  color: orange; }
-
-p .tercero {
-  color: red; }
+.menu {
+  color: red;
+  padding: auto; }
+  .menu .content {
+    display: inline;
+    background: linear-gradient(red, blue); }
