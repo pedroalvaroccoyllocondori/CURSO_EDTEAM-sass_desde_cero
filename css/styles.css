@@ -1,6 +1,12 @@
-.menu {
-  color: red;
-  padding: auto; }
-  .menu .content {
-    display: inline;
-    background: linear-gradient(red, blue); }
+body {
+  background: rebeccapurple;
+  min-height: 100vh; }
+  @media screen and (min-width: 1024px) {
+    body {
+      background: green; } }
+  @media screen and (min-width: 720px) {
+    body {
+      background: red; } }
+  @media screen and (min-width: 2300px) {
+    body {
+      background: red; } }

@@ -1,7 +1,15 @@
-@mixin menu{
-    color : red;
-    padding: auto;
-    .content{
-        @content;
+@mixin mediaQuery($clave){
+
+    @if map-has-key($map: $tamanos, $key:$clave ){
+        
+        @media screen and (min-width: map-get($tamanos,$clave)) {
+            @content;
+        }
+        
+    }@else if type-of($clave)==number and unit($clave)=='px'{
+        
+        @media screen and (min-width: $clave) {
+            @content;
+        }
     }
 }

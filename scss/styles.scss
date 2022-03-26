@@ -1,9 +1,20 @@
 @import "mixins/mixins";
+@import "variables/variables";
 
-.menu{
-    @include menu{
-        display: inline;
-        background: linear-gradient(red,blue)
+body {
+    background: rebeccapurple;
+    min-height: 100vh;
+
+    @include mediaQuery(grande){
+        background: green;
     };
-    
+    @include mediaQuery(mediano){
+        background: red;
+    }
+    @include mediaQuery(superpequeño){
+        background: red;
+    }
+    @include mediaQuery(2300px){
+        background: red;
+    }
 }
