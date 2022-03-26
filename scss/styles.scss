@@ -1,20 +1,12 @@
-@import "mixins/mixins";
-@import "variables/variables";
+// funciones en sass
 
-body {
-    background: rebeccapurple;
-    min-height: 100vh;
+@function duplicar($valor){
+    @if type-of($valor)==number{
+        @return $valor*3;
+    }
+    @return null;
+}
 
-    @include mediaQuery(grande){
-        background: green;
-    };
-    @include mediaQuery(mediano){
-        background: red;
-    }
-    @include mediaQuery(superpequeño){
-        background: red;
-    }
-    @include mediaQuery(2300px){
-        background: red;
-    }
+body{
+    min-height:duplicar('gato');
 }
