@@ -1,27 +1,33 @@
 // funciones en sass
 @import "config/funciones";
 @import "config/variables";
+@use "sass:map";
 
 
-// FUNCIONES PARA NUMEROS
+// FUNCIONES PARA listas y mapas
 
-// percentage($numero)
+
+
+
+$border: 1px solid red;
+$border1: 2px dotted red;
+$mapa:(
+    'animales':'gato',
+    'aves':'perico'
+);
+$mapa2:(
+    'animales':'tigre',
+    'aves':'canario'
+);
 
 body{
-    width: max(100%,50%,30%);//maximo
-    width: min(100%,50%,30%);//minimo
-    width: floor($number: (55.6));//redonde al menor
-    width: ceil($number: (55.6));//redondeo al mayor
-    width: round($number: (55.6));//redondeo al intermedio
-    width: random();//numero aleatorio entre 0 y 1
-    width: random(100);//numero aleatorio entre el cero y el argumento(enteros)
-}
-@function colunmas($columnas,$total-columnas){
-    @return percentage($columnas/$total-columnas);
-}
-
-@for $i from 1 through 12{
-    .cols-#{$i}{
-        width: colunmas($i,12);
-    }
+    border-color:nth($border,3);// encontrar un elemento
+    border-color:index($border,solid);//encontrar un indice 
+    border-color:join($border,$border1,comma);//union de listas con separador como ultimo parametro
+    border-color: append($border, orange);
+    border-color: map-get($mapa,'aves');//obtener el valor de un mapa del
+    border-color: map-keys($mapa);//obtener las llaves de un mapa
+    border-color: map-values($mapa);//obtener los valores de un mapa
+    border-color: map-has-key($mapa,'elefante');//preguntar si hay una llave en un mapa retorna true o false
+    $colores: map-merge($mapa,$mapa2);//juntar dos mapas
 }
