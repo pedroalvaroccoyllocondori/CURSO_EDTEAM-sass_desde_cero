@@ -3,26 +3,25 @@
 @import "config/variables";
 
 
+// FUNCIONES PARA NUMEROS
 
-// funciones de STRING
-// QUOTE-->AGREGA COMILLAS
-// UNQUOTE-->QUITA  COMILLAS
-// str-length($string);
-// str-index($string,$posicion de la letra)
-// to-upper-case($string)
-// to-lower-case($string)
-
-$width :1px;
-$style :solid;
-$color:orange;
+// percentage($numero)
 
 body{
-    background-image: imagen('gatos.svg');
-    border: unquote($width+" "+$style+" "+$color);
-    &::before{
-        content:quote($color);
+    width: max(100%,50%,30%);//maximo
+    width: min(100%,50%,30%);//minimo
+    width: floor($number: (55.6));//redonde al menor
+    width: ceil($number: (55.6));//redondeo al mayor
+    width: round($number: (55.6));//redondeo al intermedio
+    width: random();//numero aleatorio entre 0 y 1
+    width: random(100);//numero aleatorio entre el cero y el argumento(enteros)
+}
+@function colunmas($columnas,$total-columnas){
+    @return percentage($columnas/$total-columnas);
+}
+
+@for $i from 1 through 12{
+    .cols-#{$i}{
+        width: colunmas($i,12);
     }
-    index:str-index( $style,"d");
-    index:str-length($style);
-    index:to-upper-case($style)
 }
