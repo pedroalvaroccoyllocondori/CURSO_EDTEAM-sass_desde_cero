@@ -3,16 +3,39 @@
 @import "config/variables";
 
 // OPCCIONES DE debugging
-// node-sass --watch scss --output css --source-map=true
-// genera un archivo style.css.map --> para poder hacer debuggin en el navegador
+// @debug--debugggin en la consola de
+// @warn --mandar un mensaje de alerta
+//@error-- bloquea la conpilacion
 
 
+$size:1em;
+$mapa:(
+    canrio:2,
+    perro:3
+);
+$lista:white green yellow;
 
+
+@mixin boton($color){
+    @if type-of($color)==color {
+        color:$color;
+    }@else{
+        @error 'envie un color valido x q #{$color} no es  color valido'
+    }
+}
 
 body{
     display: block;
     color: red;
+    @debug type-of($size);
+    @debug $mapa;
+    @debug $lista;
+    @warn "mensaje de advertencia";
+
+    @include boton(gato);
+
     p{
         background-color: transparent;
     }
+
 }
