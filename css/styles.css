@@ -1,11 +1,10 @@
+/* line 17, scss/styles.scss */
 body {
-  background-color: #b3a9bd;
-  color: #222; }
+  display: block;
+  color: red;
+}
 
-div {
-  width: 160px;
-  height: 160px;
-  background-color: goldenrod; }
-
-div:hover {
-  background-color: #c4941d; }
+/* line 20, scss/styles.scss */
+body p {
+  background-color: transparent;
+}

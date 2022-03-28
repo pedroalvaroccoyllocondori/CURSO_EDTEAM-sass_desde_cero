@@ -2,40 +2,23 @@
 @import "config/funciones";
 @import "config/variables";
 
+// OPCCIONES DE COMPILACIONES
 
-// ajustar colores 
-// darken($color,cantidad)--->oscurecer color
-// lighten($color,cantidad)--->aclarar color
-// saturate($color,cantidad)--->saturar color
-// desaturate($color,cantidad)--->desaturar  color
-// desaturate($color,cantidad)--->desaturar  color
-// adjust-hue($color,cantidad)--->ajustar hue 
+// node-sass --watch (directorio de entrada) --output (directorio de salida)
+// node-sass --watch (directorio de entrada) --output (directorio de salida)  --source-comments   --->compilacion especificando comentarios
+// node-sass --watch (directorio de entrada) --output (directorio de salida) --output-style
 
+// expanded-->compila sin identacion
+// compressed-->compilacion en una linea
+// nested-->complila con identacion OPCCION POR DEFECTO
+// compac-->complilacion en un linea por selector
 
-
-$colo-base:rgb(179, 169, 189);
-$color-claro:#fff;
-$color-oscuro:#222;
-
-@function colorTexto(){
-    @if lightness($colo-base)>50{
-        @return $color-oscuro;
-    }@else{
-        @return $color-claro;
-    }
-}
-
+// node-sass --w (directorio de entrada) --o (directorio de salida)
 
 body{
-    background-color:$colo-base;
-    color: colorTexto();
-}
-
-div{
-    width: 160px;
-    height: 160px;
-    background-color: goldenrod;
-}
-div:hover{
-    background-color:darken(goldenrod,5)
+    display: block;
+    color: red;
+    p{
+        background-color: transparent;
+    }
 }
