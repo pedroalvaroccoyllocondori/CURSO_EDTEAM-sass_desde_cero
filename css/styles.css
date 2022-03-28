@@ -1,10 +1,8 @@
 @use "sass:map";
 body {
-  border-color: red;
-  border-color: 2;
-  border-color: 1px, solid, red, 2px, dotted, red;
-  border-color: 1px solid red orange;
-  border-color: "perico";
-  border-color: "animales", "aves";
-  border-color: "gato", "perico";
-  border-color: false; }
+  font-size: 5rem; }
+
+body {
+  color: (menu: blue, boton: orange);
+  width: 10px;
+  color: true; }

@@ -4,30 +4,32 @@
 @use "sass:map";
 
 
-// FUNCIONES PARA listas y mapas
+// FUNCIONES  de instroccpeccion
+// type-of()devuelve el tipo de datp
+// inspect()-->imprimir valores mapas y listas
+// unit()--->devuelve la unidad de un numero como string
+// initless-->evaluar la unidad  y devuelve un booleano en caso de existir
+// mixin-exists($mixin)devuelve un booleano en caso de existir un mixin-exists
 
 
-
-
-$border: 1px solid red;
-$border1: 2px dotted red;
-$mapa:(
-    'animales':'gato',
-    'aves':'perico'
+$colores:(
+    menu:blue,
+    boton: orange
 );
-$mapa2:(
-    'animales':'tigre',
-    'aves':'canario'
-);
+
+@mixin boton{
+    color:red;
+}
+
+@if mixin-exists(boton){
+    body{
+        font-size:5rem;
+    }
+}
+
 
 body{
-    border-color:nth($border,3);// encontrar un elemento
-    border-color:index($border,solid);//encontrar un indice 
-    border-color:join($border,$border1,comma);//union de listas con separador como ultimo parametro
-    border-color: append($border, orange);
-    border-color: map-get($mapa,'aves');//obtener el valor de un mapa del
-    border-color: map-keys($mapa);//obtener las llaves de un mapa
-    border-color: map-values($mapa);//obtener los valores de un mapa
-    border-color: map-has-key($mapa,'elefante');//preguntar si hay una llave en un mapa retorna true o false
-    $colores: map-merge($mapa,$mapa2);//juntar dos mapas
+    color:inspect($colores);
+    width: unquote(10+ unit(10px));
+    color:unitless(10);
 }
