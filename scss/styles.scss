@@ -1,35 +1,9 @@
 // funciones en sass
 @import "config/funciones";
 @import "config/variables";
-@use "sass:map";
 
 
-// FUNCIONES  de instroccpeccion
-// type-of()devuelve el tipo de datp
-// inspect()-->imprimir valores mapas y listas
-// unit()--->devuelve la unidad de un numero como string
-// initless-->evaluar la unidad  y devuelve un booleano en caso de existir
-// mixin-exists($mixin)devuelve un booleano en caso de existir un mixin-exists
-
-
-$colores:(
-    menu:blue,
-    boton: orange
-);
-
-@mixin boton{
-    color:red;
-}
-
-@if mixin-exists(boton){
-    body{
-        font-size:5rem;
-    }
-}
-
-
-body{
-    color:inspect($colores);
-    width: unquote(10+ unit(10px));
-    color:unitless(10);
+.text{
+    text-shadow: sombra-larga(50,goldenrod);
+    font-size: 15rem;
 }

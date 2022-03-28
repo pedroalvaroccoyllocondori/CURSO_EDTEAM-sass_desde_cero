@@ -1,8 +1,3 @@
-@use "sass:map";
-body {
-  font-size: 5rem; }
-
-body {
-  color: (menu: blue, boton: orange);
-  width: 10px;
-  color: true; }
+.text {
+  text-shadow: 1px 1px goldenrod, 2px 2px goldenrod, 3px 3px goldenrod, 4px 4px goldenrod, 5px 5px goldenrod, 6px 6px goldenrod, 7px 7px goldenrod, 8px 8px goldenrod, 9px 9px goldenrod, 10px 10px goldenrod, 11px 11px goldenrod, 12px 12px goldenrod, 13px 13px goldenrod, 14px 14px goldenrod, 15px 15px goldenrod, 16px 16px goldenrod, 17px 17px goldenrod, 18px 18px goldenrod, 19px 19px goldenrod, 20px 20px goldenrod, 21px 21px goldenrod, 22px 22px goldenrod, 23px 23px goldenrod, 24px 24px goldenrod, 25px 25px goldenrod, 26px 26px goldenrod, 27px 27px goldenrod, 28px 28px goldenrod, 29px 29px goldenrod, 30px 30px goldenrod, 31px 31px goldenrod, 32px 32px goldenrod, 33px 33px goldenrod, 34px 34px goldenrod, 35px 35px goldenrod, 36px 36px goldenrod, 37px 37px goldenrod, 38px 38px goldenrod, 39px 39px goldenrod, 40px 40px goldenrod, 41px 41px goldenrod, 42px 42px goldenrod, 43px 43px goldenrod, 44px 44px goldenrod, 45px 45px goldenrod, 46px 46px goldenrod, 47px 47px goldenrod, 48px 48px goldenrod, 49px 49px goldenrod, 50px 50px goldenrod;
+  font-size: 15rem; }

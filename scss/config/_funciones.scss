@@ -1,3 +1,13 @@
+@function sombra-larga($repeticiones,$color){
+    $sombra:#{1px 1px $color};
+    @for $i from 2 through $repeticiones{
+        $sombra:append($sombra,$i*1px $i*1px $color,comma)
+    }
+    @return $sombra;
+}
+
+
+
 @function transformarEm($px,$base:16px){
     @if type-of($px)==number and unit($px)=='px'{
         @return $px/$base *1em;
