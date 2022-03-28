@@ -2,27 +2,40 @@
 @import "config/funciones";
 @import "config/variables";
 
-// funciones de colores--->retornana la cantidad de color de cada uno
 
-    // rgb
-    // red()--->retorna el valor de rojo
-    // green()--->retorna el valor de verde
-    // blue()--->retorna el valor de azul
-    // hsl
-    // hue()--->retorna la cantidad de hue
-    // saruration()-->retorna la cantidad de saturacion
-    // lightness()-->retorna la cantidad de brillo
+// ajustar colores 
+// darken($color,cantidad)--->oscurecer color
+// lighten($color,cantidad)--->aclarar color
+// saturate($color,cantidad)--->saturar color
+// desaturate($color,cantidad)--->desaturar  color
+// desaturate($color,cantidad)--->desaturar  color
+// adjust-hue($color,cantidad)--->ajustar hue 
 
+
+
+$colo-base:rgb(179, 169, 189);
+$color-claro:#fff;
+$color-oscuro:#222;
+
+@function colorTexto(){
+    @if lightness($colo-base)>50{
+        @return $color-oscuro;
+    }@else{
+        @return $color-claro;
+    }
+}
 
 
 body{
-    red: red(hsl(60,59,50));
-    verde: green(hsl(60,59,50));
-    azul: blue(hsl(60,59,50));
-
-    hue:hue(rgb(14,28,94));
-    satruracion:saturation(rgb(14,28,94));
-    brillo:lightness(rgb(14,28,94));
+    background-color:$colo-base;
+    color: colorTexto();
 }
 
- 
+div{
+    width: 160px;
+    height: 160px;
+    background-color: goldenrod;
+}
+div:hover{
+    background-color:darken(goldenrod,5)
+}

@@ -1,7 +1,11 @@
 body {
-  red: 202.725;
-  verde: 202.725;
-  azul: 52.275;
-  hue: 229.5deg;
-  satruracion: 74.07407%;
-  brillo: 21.17647%; }
+  background-color: #b3a9bd;
+  color: #222; }
+
+div {
+  width: 160px;
+  height: 160px;
+  background-color: goldenrod; }
+
+div:hover {
+  background-color: #c4941d; }
