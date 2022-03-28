@@ -2,18 +2,12 @@
 @import "config/funciones";
 @import "config/variables";
 
-// OPCCIONES DE COMPILACIONES
+// OPCCIONES DE debugging
+// node-sass --watch scss --output css --source-map=true
+// genera un archivo style.css.map --> para poder hacer debuggin en el navegador
 
-// node-sass --watch (directorio de entrada) --output (directorio de salida)
-// node-sass --watch (directorio de entrada) --output (directorio de salida)  --source-comments   --->compilacion especificando comentarios
-// node-sass --watch (directorio de entrada) --output (directorio de salida) --output-style
 
-// expanded-->compila sin identacion
-// compressed-->compilacion en una linea
-// nested-->complila con identacion OPCCION POR DEFECTO
-// compac-->complilacion en un linea por selector
 
-// node-sass --w (directorio de entrada) --o (directorio de salida)
 
 body{
     display: block;

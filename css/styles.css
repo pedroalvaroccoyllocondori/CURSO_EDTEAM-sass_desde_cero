@@ -1,10 +1,7 @@
-/* line 17, scss/styles.scss */
 body {
   display: block;
-  color: red;
-}
+  color: red; }
+  body p {
+    background-color: transparent; }
 
-/* line 20, scss/styles.scss */
-body p {
-  background-color: transparent;
-}
+/*# sourceMappingURL=styles.css.map */
